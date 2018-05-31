@@ -1,4 +1,7 @@
 class SongsController < ApplicationController
+  # example preference object
+  # p = Preference.new(artist_sort_order: "DESC", song_sort_order: "ASC", allow_create_artists: false, allow_create_songs: true)
+
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])

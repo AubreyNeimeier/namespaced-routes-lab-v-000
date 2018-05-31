@@ -1,4 +1,7 @@
 class ArtistsController < ApplicationController
+  # example preference object
+  # p = Preference.new(artist_sort_order: "DESC", song_sort_order: "ASC", allow_create_artists: false, allow_create_songs: true)
+
   def index
     @artists = Artist.all
   end
@@ -8,6 +11,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    binding.pry
     if Preference.first.allow_create_artists?
       @artist = Artist.new
     else
