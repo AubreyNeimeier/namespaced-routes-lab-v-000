@@ -1,3 +1,3 @@
-class Admin::PreferencesController < ApplicationControlller
+class Admin::PreferencesController < ApplicationController
 
 end
